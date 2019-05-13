@@ -458,13 +458,13 @@
 
 #pragma mark - 应用序列号，UUID可以替代
 // 获取UUID，删除重新安装会变，但如果有同一厂商的app，则不变
-+ (NSString *)getUUID{
++ (NSString *)zy_getUUID{
     NSString *uuidStr = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     return uuidStr;
 }
 
 #pragma mark - 获取应用安装时间
-+ (NSString *)getAppCreateTime{
++ (NSString *)zygetAppCreateTime{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     // 2.存储数据
     NSString *createTime = [defaults stringForKey:@"createTime"];
@@ -495,16 +495,16 @@
 + (NSString *)zy_getCurrentSystemTime{
     
     NSDate *date = [NSDate date];
-    NSTimeZone *zone = [NSTimeZone systemTimeZone];
-    NSInteger interval = [zone secondsFromGMTForDate:date];
-    NSDate *localeDate = [date dateByAddingTimeInterval:interval];
+//    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+//    NSInteger interval = [zone secondsFromGMTForDate:date];
+//    NSDate *localeDate = [date dateByAddingTimeInterval:interval];
     
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     //设置格式：zzz表示时区
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
-    NSString *currentDateString = [dateFormatter stringFromDate:localeDate];
+    NSString *currentDateString = [dateFormatter stringFromDate:date];
     
     
     return currentDateString;

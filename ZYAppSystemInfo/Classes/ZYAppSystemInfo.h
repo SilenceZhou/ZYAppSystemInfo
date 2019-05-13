@@ -119,14 +119,14 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return NSString
  */
-+ (NSString *)getUUID;
++ (NSString *)zy_getUUID;
 
 /**
  获取应用安装与更新时间
  
  @return NSString
  */
-+ (NSString *)getAppCreateTime;
++ (NSString *)zy_getAppCreateTime;
 
 
 /**
