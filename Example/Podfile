@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'ZYAppSystemInfo_Example' do
+  pod 'ZYAppSystemInfo', :path => '../'
+
+  target 'ZYAppSystemInfo_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
