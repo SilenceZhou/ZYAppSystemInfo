@@ -11,15 +11,6 @@
 #define ZYAppSystemInfoConst_h
 
 
-/**
- IMSI 相关信息
- */
-typedef struct {
-    NSString * _Nullable nationCode; /// 国家代码
-    NSString * _Nonnull mobieCode; /// 网络代码
-    NSString * _Nullable carrierName; /// 运营商
-}ZYIMSI;
-
 
 /**
  屏幕分辨率

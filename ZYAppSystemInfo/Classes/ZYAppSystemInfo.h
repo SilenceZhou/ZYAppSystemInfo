@@ -10,6 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface ZYIMSI : NSObject
+
+@property (nonatomic, copy)NSString * nationCode; /// 国家代码
+@property (nonatomic, copy)NSString * mobieCode; /// 网络代码
+@property (nonatomic, copy)NSString * carrierName; /// 运营商
+@end
+
 
 @interface ZYAppSystemInfo : NSObject
 
@@ -60,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  @return ZYIMSI
  */
 
-+ (ZYIMSI)zy_getImsiPart;
++ (ZYIMSI *)zy_getImsiPart;
 
 /**
  应用运行占用的内存

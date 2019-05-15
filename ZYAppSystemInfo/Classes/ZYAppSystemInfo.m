@@ -40,6 +40,11 @@
 #define IP_ADDR_IPv4    @"ipv4"
 #define IP_ADDR_IPv6    @"ipv6"
 
+
+@implementation ZYIMSI
+
+@end
+
 @implementation ZYAppSystemInfo
 
 #pragma mark - 获取APP的版本号
@@ -257,12 +262,12 @@
 
 #pragma mark - 获取IMSI部分信息
 
-+ (ZYIMSI)zy_getImsiPart{
++ (ZYIMSI *)zy_getImsiPart{
     
     CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
     CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
     
-    ZYIMSI imsi;
+    ZYIMSI *imsi = [[ZYIMSI alloc] init];
     imsi.carrierName = [carrier carrierName];
     imsi.nationCode      = [carrier mobileCountryCode];
     imsi.mobieCode   = [carrier mobileNetworkCode];
