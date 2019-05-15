@@ -264,7 +264,7 @@
     
     ZYIMSI imsi;
     imsi.carrierName = [carrier carrierName];
-    imsi.cnCode      = [carrier mobileCountryCode];
+    imsi.nationCode      = [carrier mobileCountryCode];
     imsi.mobieCode   = [carrier mobileNetworkCode];
     return imsi;
 }
