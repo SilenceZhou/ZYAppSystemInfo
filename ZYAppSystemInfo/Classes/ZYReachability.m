@@ -20,7 +20,7 @@
 //ZYReachability fully support IPv6.  For full details, see ReadMe.md.
 
 
-NSString *kReachabilityChangedNotification = @"kNetworkReachabilityChangedNotification";
+NSString *kZYReachabilityChangedNotification = @"kNetworkReachabilityChangedNotification";
 
 
 #pragma mark - Supporting functions
@@ -56,7 +56,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 
     ZYReachability* noteObject = (__bridge ZYReachability *)info;
     // Post a notification to notify the client that the network reachability changed.
-    [[NSNotificationCenter defaultCenter] postNotificationName: kReachabilityChangedNotification object: noteObject];
+    [[NSNotificationCenter defaultCenter] postNotificationName: kZYReachabilityChangedNotification object: noteObject];
 }
 
 
