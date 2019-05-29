@@ -1,0 +1,16 @@
+PODS:
+  - ZYAppSystemInfo (0.1.0)
+
+DEPENDENCIES:
+  - ZYAppSystemInfo (from `../`)
+
+EXTERNAL SOURCES:
+  ZYAppSystemInfo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZYAppSystemInfo: 29d2fd3f6fbcfff582c813afc0dc8ff2696ee117
+
+PODFILE CHECKSUM: 86fb19b7490beafb63d6c90742c41fbd1d891d87
+
+COCOAPODS: 1.5.3
