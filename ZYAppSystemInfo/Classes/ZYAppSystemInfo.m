@@ -494,20 +494,11 @@
 
 + (NSString *)zy_getCurrentSystemTime{
     
-    NSDate *date = [NSDate date];
-    NSTimeZone *zone = [NSTimeZone systemTimeZone];
-    NSInteger interval = [zone secondsFromGMTForDate:date];
-    NSDate *localeDate = [date dateByAddingTimeInterval:interval];
-    
-    
+    NSDate *currentDate = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    //设置格式：zzz表示时区
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
-    
-    NSString *currentDateString = [dateFormatter stringFromDate:localeDate];
-    
-    
-    return currentDateString;
+    NSString *dateString = [dateFormatter stringFromDate:currentDate];
+    return dateString;
 }
 
 
